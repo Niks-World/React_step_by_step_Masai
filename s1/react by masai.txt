@@ -34,6 +34,27 @@ React --- UI --- Preidefined fns using which we can create React elements ----- 
 
 How to create React Element ?
 
+In React, you can create elements using JSX (JavaScript XML) syntax or by using React's createElement method.
+JSX is a more popular and convenient way to create React elements, 
+but both approaches achieve the same result. Let me show you both methods:
+
+import React from 'react';
+
+const MyComponent = () => {
+  return <h1>Hello, I am a React element created with JSX!</h1>;
+};
+
+
+## Here's the equivalent of the JSX example using createElement:
+
+import React from 'react';
+
+const MyComponent = () => {
+  return React.createElement('h1', null, 'Hello, I am a React element created with React.createElement!');
+};
+
+
+
 
 
 
