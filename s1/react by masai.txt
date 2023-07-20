@@ -1,0 +1,45 @@
+what is React JS ?
+React is A javaScript LIbrary. (not a framewor )
+
+what is Library ?
+it is collection of pre-defined function or class or
+properties.
+
+what is Framework ?
+
+it is collection of Libraries set of rules 
+
+---------------------------------------------------------
+React is provide us----  Library--- set of pre-defined function(fn) and class
+
+Q1. what is the purpose of React ?
+It is used to create UI (User interface).
+
+Q2. UI
+HTML
+JS 
+THEY can alse make usre interface .
+
+Q3. why React to create UI ?
+
+React ---UI
+Q what HTML , JS , React provide
+
+HTML ---- UI ---- Pre-defined Element 
+
+JS----- UI -----PRE-defined fn using which can Create DOM Element ----- UI
+
+React --- UI --- Preidefined fns using which we can create React elements ----- UI
+---------------------------------------------------------
+
+How to create React Element ?
+
+
+
+
+
+
+
+
+
+

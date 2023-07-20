@@ -1,0 +1,1358 @@
+IMPORTANT
+To Make A server From JSon
+first make a file on desktop than open that file in vs code than opne terminal in vs code than run the command
+step 1- npm init -y
+step 2- npm i json-server cors json-server
+ make file with name (.gitignore) and (index.js)
+https://github.com/Gautam8014/project_server/blob/main/db.json
+
+1. how to create react app in New file ?
+cammand :
+
+step 1- make a file on desktop and drag to vs code 
+step 2 - open terminal in vs code 
+step 3- npx creat-react-app (this is the camand) learn (this is the name of file. you can put any name)
+step 4- press Enter 
+
+** rafce** for head in put in react.
+
+**&nbsp** for space in between any sentance.
+
+***3 mantra *** to push code in github
+[3 Mantra to push in github from .Vs Code]
+15/6/23-6:24 am (morning) 
+
+1. Git add .  (Hit Enter)
+2. Git commit -m "Any name you want show in github last update"  (Hit Enter)
+3. Git push  ( hit Enter)
+
+Now done ✅ your file is push in github Repo.
+Enjoy 😉 contribution and deploy to show other Your work .
+
+
+2. HOW to make space in one line between 2 varibale ?
+ans- write this camand in between 
+  ( &nbsp)
+---------------------------------------------------------
+[Index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import Users from './Users';
+import User1 from './User1';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+]
+---------------------------------------------------------
+
+[App.js
+
+import logo from './logo.svg';
+import './App.css';
+import Users from './Users';
+import User1 from './User1';
+import Usjsx from './Usjsx';
+
+function App() {
+  let data="nik world";
+  function apple()
+  {
+    data="jack";
+     alert(data);
+  }
+  return (<div className="App">
+     
+  <h1> {data} </h1>
+   <Users />
+   <User1 />
+   <Usjsx />
+   {/* {/* <button onClick={()=>alert("button hello on click")}>click me </button> */}
+    <button onClick={apple}> click me</button> 
+   </div>
+);   
+}
+
+
+
+export default App;
+]
+
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return(
+    <div></div>
+  )
+}
+
+
+      
+export default App;    
+
+---------------------------------------------------------
+[Users.js
+
+import React, {Component} from "react";
+import './App.css';
+
+function Users () {
+    return (
+        <div>
+            <h1> Hello React</h1>
+            
+        </div>
+    );
+}
+
+export default Users;
+]
+
+
+[User1.js
+
+import React, {Component} from "react";
+export default class User1 extends Component
+{
+    render()
+    {
+        return(
+            <h1> hello from user 1</h1>
+        )
+    } 
+}
+
+]
+---------------------------------------------------------
+[UsJSX.JS
+
+function Usjsx()
+{
+    return(
+        <div>{10+45}
+        <h1> JSX</h1>
+        
+        </div>
+
+    
+    )
+}
+
+export default Usjsx;
+
+]
+-------------------------------------------------------
+
+ #how to use state in function component (1.37 MIN)
+4. INTERVIWE QUESTION
+Q. IS I AM CAN USE STATE OUT OF COMPONENT
+Q.KYA MAIN EK COMPONET KI STATE IS BAHAR USE KAR SAKTA HU ?
+
+2. STATE KYA HAI ? PUBLIC / PRIVATE
+ans. public hote hai
+
+import {useState} from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  const [data,setData]=useState("0") ##here you can input your name or any data  like(NIK)
+  function updateData()
+  {
+    setData=("data+1") ### here what you want to update (from NIK TO JACK )OR anythings
+  }
+  console.warn("--------")
+  
+  return (
+  <div className="App"> 
+  <h1> {data} </h1>
+    <button onClick={updateData}> UPDATE Data</button> 
+   </div>
+);   
+}
+export default App;
+---------------------------------------------------------
+
+## state in class component !!!
+ 
+   1. make class componet 
+   2. what is state 
+   3. Difne state
+   4. Update state with a button click
+   5. INTERVIWE QUESTION
+
+
+[class component
+
+
+import React,{Component} from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+ 
+  constructor()
+  {
+    super();
+    this.state={
+      data:"nik"
+    }
+  }
+  render()
+
+  {
+     return (
+      <div className="App"> 
+      <h1> {this.state.dats} </h1>
+       </div>
+     )
+  }
+}
+
+      
+export default App;    
+]
+
+update button in class
+
+import React,{Component} from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+ 
+  constructor()
+  {
+    super();
+    this.state={
+      data:"nik"
+    }
+  }
+  apple()
+  {
+    alert("apple")
+  }
+  render()
+
+  {
+     return (
+      <div className="App"> 
+      <h1> {this.state.dats} ok </h1>
+      <button onClick={() =>this.apple()}> update data </button>
+       </div>
+     )
+  }
+}
+
+      
+export default App;    
+]
+
+
+addd data +1
+
+import React,{Component} from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+ 
+  constructor()
+  {
+    super();
+    this.state={ data:1
+    }
+  }
+  apple()
+  {
+    this.setState({data:this.state.data+1})
+  }
+  render()
+
+  {
+     return (
+      <div className="App"> 
+      <h1> {this.state.dats} ok </h1>
+      <button onClick={() =>this.apple()}> update data </button>
+       </div>
+     )
+  }
+}
+
+      
+export default App;    
+]
+
+--------------------------------------------------------
+
+Props with Functional component   [1:47 min]
+
+1. what are props
+2. use of props
+3. example whith function component
+4. update props on button click
+5. INTERVIWE QUESTION 
+Q. KYA HUM USE STATE WAHA USE KARSAKTE HAI ?
+ANS - NO 
+
+6. Join on insta- @php.step.by.step
+
+STUDENT.JS 
+
+import logo from './logo.svg';
+import './App.css';
+import student from '/student'
+
+function App() {
+  return(
+    <div></div>
+  )
+}
+
+
+      
+export default App;    
+
+IN APP.JS 
+
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student';
+function App() {
+  return(
+    <div className='App'>
+      <h1>Props in React :) </h1>
+      <Student />
+      
+    </div>
+  )
+}
+
+
+      
+export default App;    
+
+---------------------------------------------------------
+
+app.js
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student';
+function App() {
+  return(
+    <div className='App'>
+      <h1>Props in React :) </h1>
+      <Student name={"nik"} email="nik@gmail.com"/>
+      <Student name={"jack"} email="jack@gmail.com"/>
+      <Student name={"peter"} email="peter@gmail.com"/>
+    </div>
+  )
+}
+
+
+      
+export default App;    
+
+in STUDENT.JS
+
+function Student(Props)
+{
+    console.log(Props.name)
+    return(
+        <div style={{backgroundColor: "skyblue" ,margin:10}}>
+            
+            <h1>student {Props.name}</h1>
+            <h2>Email : {Props.email}</h2>
+
+        </div>
+    )
+}
+
+export default Student
+
+
+---------------------------------------------------------
+
+how student name and add
+
+in student,js
+
+function Student(Props)
+{
+    console.log(Props.name)
+    return(
+        <div style={{backgroundColor: "skyblue" ,margin:10}}>
+            
+            <h1>student {Props.name}</h1>
+            <h2>Email : {Props.email}</h2>
+            <h3>Address - {Props.other.address}</h3>
+            <h4>Mobile : {Props.other.mobile}</h4>
+        </div>
+    )
+}
+
+export default Student
+
+in app.js
+
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student';
+function App() {
+  return(
+    <div className='App'>
+      <h1>Props in React :) </h1>
+      <Student name={"nik"} email="nik@gmail.com" other={{address:"Delhi", mobile:"001"}}/>
+      <Student name={"jack"} email="jack@gmail.com" other={{address:" GAYA", mobile:"222"}}/>
+      <Student name={"peter"} email="peter@gmail.com" other={{address:"USA", mobile:"023"}} /> 
+    </div>
+  )
+}
+
+
+      
+export default App;    
+---------------------------------------------------------
+HOW TO UPDATE BUTTON NAME IN props
+
+IN STUDENT.JS
+
+function Student(Props)
+{
+    console.log(Props.name)
+    return(
+        <div style={{backgroundColor: "skyblue" ,margin:10}}>
+            
+            <h1>Student {Props.name}</h1>
+          
+        </div>
+    )
+}
+
+export default Student
+
+IN APP.JS
+
+import React, {useState}from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student';
+function App() {
+  const [name,setName]=useState("NIK")
+  return(
+    <div className='App'>
+      <h1>Props in React :) </h1>
+      <Student name={name} />
+      <button onClick={()=>{setName("Sidhu")}}>Update Name</button>
+    </div>
+  )
+}
+
+
+      
+export default App;    
+
+---------------------------------------------------------
+
+PROPS WITH CLASS COMPONET [1:59 MIN]
+
+• What are props
+• Use of props
+• Example with class component
+• Update props on Button click
+• Interview Question
+Q. KYA HUM FUNCTION AS PROPS SEND KAR SAKTE HAI?
+ANS. YES KAR SAKTE HAI
+Q. KYA HUM HTML PASS KAR SAKTE HAI ?
+ANS - HA KAR SAKTE HAI
+• Join on Insta @php.step.by.step
+
+IN APP.JS
+
+
+how reacts and props component work
+
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student'
+function App() {
+  return (
+    <div className="App">
+   <h1>Props  !</h1>
+  <Student name="ANIL" email="anil@test.com" />
+    </div>
+  )
+}
+
+export default App;
+
+
+IN STUDENT.JS
+
+import React from "react";
+
+export default class Student extends React.Component{
+
+    render()
+    {
+        console.log(this.props)
+        return( 
+            <div style={{backgroundColor: "skyblue" ,margin:20}}>
+                <h1>Hello {this.props.name}</h1>
+                <h2>{this.props.email}</h2>
+            </div>
+        )
+    
+    }
+}
+---------------------------------------------------------
+
+UPDATE PROPS ON CLICK BUTTN
+
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student'
+import React from 'react';
+class App extends React.Component {
+  constructor()
+  {
+    super();
+    this.state={
+      name:"Anil"
+    }
+  }
+  render()
+  {
+  return (
+  <div className="App">
+   <h1>Props  !</h1>
+  <Student name={this.state.name} email="anil@test.com" />
+   <button onClick={()=>this.setState({name:"SIDHU"})}>
+    UPDATE name </button>
+  </div>
+  )}
+}
+
+export default App;
+
+
+import React from "react";
+
+export default class Student extends React.Component{
+
+    render()
+    {
+        console.log(this.props)
+        return( 
+            <div style={{backgroundColor: "skyblue" ,margin:20}}>
+                <h1>Hello {this.props.name}</h1>
+                <h2>{this.props.email}</h2>
+            </div>
+        )
+    
+    }
+}
+---------------------------------------------------------
+Get Input box value
+
+1.Make Input field
+2.Make function and get Value
+3.Make button and state
+4.Get value on Button Click
+5.Interview Question
+Q. KYA HUM PROPS K ANDER HTML KO SEND KAR SAKTE HAI?
+ANS- HA KR SAKTE HAI /THIS.CLASS.CHILDREN if class use karte ho to
+Q. kya hum check box ki value get kar sakte hai ya nhi ?
+• Join on Insta @php.step.by.step
+
+###how to make input box
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function App(){
+
+  function getData(val)
+  {
+    console.warn(val)
+  }
+  return(
+    <div className='App'>
+      <h1>GET Input BOX vAlue  !</h1>
+      <input type="text" onChange={getData} />
+    </div>
+
+  )
+}
+
+export default App;
+---------------------------------------------------------
+### function get value 
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function App(){
+const [data,setData]=useState(null)
+  function getData(val)
+  {
+    console.warn(val.target.value)
+    setData(val.target.value)
+  }
+  return(
+    <div className='App'>
+      <h1>{data}</h1>
+      <input type="text" onChange={getData} />
+    </div>
+
+  )
+}
+
+export default App;
+---------------------------------------------------------
+### how to print on button click [2:20 min]
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function App(){
+const [data,setData]=useState(null)
+const [print,setPrint]=useState(false) 
+
+
+  function getData(val)
+  {
+    console.warn(val.target.value)
+    setData(val.target.value)
+##if you want to hide value than add one more line bewlo
+    setPrint (false) 
+
+  }
+  return(
+    <div className='App'>
+      {
+        print?
+        <h1>{data}</h1>
+        :null
+      }
+      <h1>{data}</h1>
+      <input type="text" onChange={getData} />
+      <button onClick={()=>setPrint(true )}>print Data</button>
+
+    </div>
+
+  )
+}
+
+export default App;
+
+---------------------------------------------------------
+Hide and Show Element
+
+1. Make A div or any other element
+2. Make State for hiding and show element
+3. Make Button
+4. Update state on button click
+5. Interview Question
+
+Q.KYA HUM REACT JQUERY AND CSS MAI SAME METHOD USE KARTE HAI HIDE SHOW KARNYE K LIYA , BASIC DIFFRENCE KYA HAI?
+
+• Join on Insta @php.step.by.step
+
+
+### HIDE AND SHOW ELEMENT
+
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function App(){
+  const [status,setStatus]=React.useState(true)
+
+ ## BY default value show karna hai to (true ) ager nhi to (false) input hoga
+
+return (
+  <div className='App'>
+    {         
+      status?  <h1>HELLO WORLD !</h1>:null
+    
+    }
+  
+   <button onClick={()=>setStatus(false) }> Hide</button>
+   <button onClick={()=>setStatus(true) }> Show </button>
+ 
+   </div>
+ );
+}
+
+
+export default App;
+
+
+## HOW TO OPRATE ON ONE BUTTON/TOGGLE
+
+
+  import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function App(){
+  const [status,setStatus]=React.useState(false)
+return (
+  <div className='App'>
+    {         
+      status?  <h1>HELLO WORLD !</h1>:null
+    
+      <button onClick={()=>setStatus(!status) }> TOGGLE</button>
+
+   </div>
+ );
+}
+
+
+export default App;
+
+---------------------------------------------------------
+
+   Basic Form  [2:28 MIN]
+
+• Make HTML form
+• Add some field
+• Use state for field data
+• Submit and control form
+• Interview Question
+Q. MAIN AGER KAVI FORM FILED KO DISABLE KARNA CHAU TO KAISE HOGA ON A BUTON CLICK OR WITH ON BUTTON CLICK ?
+• Join on Insta @php.step.by.step
+
+
+## Handel FROM in REACT
+all the function 
+buton and submit
+
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function App(){
+  const[name,setName]=useState("");
+  const[tnc,setTnc]=useState(false);
+  const[setinterest,setInterest]=useState("");
+
+  function getFormData(e)
+  {
+    console.warn(name,tnc.interest)
+    e.preventDefault()
+  }
+return (
+  <div className='App'>
+   <h1>Handel FROM in REACT </h1>
+   <form onSubmit={getFormData}>
+     <input type="text" placeholder='Enter name'onChange={(e)=>setName(e.target.value)}/> <br /><br />
+     <select onChange={(e)=>setInterest(e.target.value)}>
+      <option>select Option</option>
+      <option>Marvel</option>
+      <option>Dc</option>
+      <option>Hollywood</option>
+      <option>Bollywood</option>
+     </select> <br /><br />
+     <input type='checkbox' onChange={(e)=>setTnc(e.target.checked)}/> <span> Accept Terms and Condition  </span>
+     <br></br>
+    <button type='submit'>Submit</button>
+    <button>Clear</button>
+   </form>
+    
+   </div>
+ );
+}
+
+
+export default App;
+
+---------------------------------------------------------
+Conditional rendering In If Condition [2:38 MIN]
+
+1. Make Component
+2. Use State
+3. Not Recommended Way for condition
+4. Correct way condition
+5. Interview Question
+Q.kya ager state k jagahye normal variable late to chalte ya nhi ?
+ans-nhi ager veriable input kar te hai to defienf karna hoga.
+• Join on Insta @php.step.by.step
+
+###MAKING PROFILE BASE
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function Profile()
+{
+    return(
+        <div>
+            <h1>Profile Rendring</h1>
+        </div>
+    )
+}
+
+
+export default Profile;
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+import Profile from './Profile';
+function App() {
+  return(
+    <div className='App'>
+       <h1>WELCOME GUEST </h1>
+       <Profile />
+    </div>
+  )
+}
+
+export default App;
+--------------------------------------------------------
+### ager TRUE HAI TO NIK AGER FALSE HAI TO GUEST 
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function Profile()
+{
+    const [loggedIn,setLoggedIn]=useState(false) (##HERE)
+    return(
+        <div>
+            {loggedIn?<h1>WELCOME NIK </h1>:<h1>WELCOME GUEST</h1>}
+        </div>
+    )
+}
+
+
+export default Profile;
+
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+import Profile from './Profile';
+function App() {
+  return(
+    <div className='App'>
+       <Profile />
+    </div>
+  )
+}
+
+export default App;
+-----------------------------------------------------
+
+### TERNARI OPRATOR 3 Condition  
+ 
+in profile.js
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function Profile()
+{
+    const [loggedIn,setLoggedIn]= useState(1) // [##here can change with number 1/2/3]
+
+    // 1,2,3
+    return(
+        <div>
+                    {loggedIn==1?<h1>WELCOME NIK </h1>
+                    :loggedIn==2?<h1>WELCOME GUEST</h1>
+                    :<h1>welcome anil</h1>}
+
+
+        </div>
+    )
+
+}
+
+
+export default Profile;
+
+in app'js
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+import Profile from './Profile';
+function App() {
+  return(
+    <div className='App'>
+       <Profile />
+    </div>
+  )
+}
+
+export default App;
+
+---------------------------------------------------------
+
+### kya hum function ko pass kar sakte hai as a props 
+yes .. kar sakte hai
+
+## USER COMPONET 
+IN APP.JS
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+import User from './User'
+function App() {
+  function getData()
+  {
+    alert("HELLO FROM APP ")
+  }
+  return(
+    <div className='App'>
+       <User data={getData} />
+    </div>
+  )
+}
+
+export default App;
+
+IN USER.JS
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function User(props){
+    return(
+        <div>
+      <h1>User componet </h1>
+      <button onClick={props.data}>Call Data function</button>
+        </div>
+    )
+}
+
+export default User;
+
+## PARAENT K ANDER Child se code call kar SAKTE HAI
+## new file add AS MEMBER.JS
+
+IN MEMBER.JS 
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function Members(props){
+    return(
+        <div>
+      <h1>User componet </h1>
+      <button onClick={props.data}>Call Data function</button>
+        </div>
+    )
+}
+
+export default Members;
+
+IN APP'JS
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+import User from './User'
+import Members from './Members';
+function App() {
+  function getData()
+  {
+    alert("HELLO FROM APP ")
+  }
+  return(
+    <div className='App'>
+       <User data={getData} />
+       <User data={getData} />
+       <User data={getData} />
+       <User data={getData} />
+
+       <div style={{float:'right'}}>
+       <Members data={getData} />
+       </div>
+    </div>
+  )
+}
+
+export default App;   [2:53 MIN]
+
+Q- KYA HUM JAISE MEMBER KO ADD KIYA WAISE HE SUPER CHILD KO V RECALL KAR SAKTE HAI PARENT K ANDER ?
+ANS - YES HUM CALL KAR SAKTE HAI , JAISE V MAAN HAI CALL KAR LO
+
+-------------------------------------------------------
+
+            LIFE CYCLE METHODS 
+
+   steps    1.SPERM (BEFORE birth , egg and sperm)  
+            2.baby 
+            3.CHILD
+            4.Young Parson or Adolesenct
+		5.Adult 
+Than repate this until die
+
+
+          LIFE CYCLE METHODS IN REACT
+
+Lifecycle of Components
+Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
+
+The three phases are :
+                       1.Mounting 
+                       2.Updating  
+                       3.Unmounting
+
+     *Mounting*
+
+Mounting means putting elements into the DOM.
+
+React has four built-in methods that gets called, in this order, when mounting a component:
+
+1. constructor()
+2. getDerivedStateFromProps()
+3. render()
+4. componentDidMount()
+
+The render() method is required and will always be called, the others are optional and will be called if you define them.
+
+constructor
+The constructor() method is called before anything else, when the component is initiated, and it is the natural place to set up the initial state and other initial values.
+
+Exaple:
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  render() {
+    return (
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+    );
+  }
+}
+
+ReactDOM.render(<Header />, document.getElementById('root'));
+
+
+  *Updating*
+
+The next phase in the lifecycle is when a component is updated.
+
+A component is updated whenever there is a change in the component's state or props.
+
+React has five built-in methods that gets called, in this order, when a component is updated:
+
+         1.getDerivedStateFromProps()
+         2.shouldComponentUpdate()
+	   3.render()
+ 	   4.getSnapshotBeforeUpdate()
+	   5.componentDidUpdate()
+
+The render() method is required and will always be called, the others are optional and will be called if you define them.
+
+getDerivedStateFromProps
+Also at updates the getDerivedStateFromProps method is called. This is the first method that is called when a component gets updated.
+
+This is still the natural place to set the state object based on the initial props.
+
+   *Unmounting*
+
+The next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.
+
+React has only one built-in method that gets called when a component is unmounted:
+
+         1.componentWillUnmount()
+
+componentWillUnmount
+
+The componentWillUnmount method is called when the component is about to be removed from the DOM.
+
+
+Example:
+Click the button to delete the header:
+
+
+class Container extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {show: true};
+  }
+  delHeader = () => {
+    this.setState({show: false});
+  }
+  render() {
+    let myheader;
+    if (this.state.show) {
+      myheader = <Child />;
+    };
+    return (
+      <div>
+      {myheader}
+      <button type="button" onClick={this.delHeader}>Delete Header</button>
+      </div>
+    );
+  }
+}
+
+class Child extends React.Component {
+  componentWillUnmount() {
+    alert("The component named Header is about to be unmounted.");
+  }
+  render() {
+    return (
+      <h1>Hello World!</h1>
+    );
+  }
+}
+
+ReactDOM.render(<Container />, document.getElementById('root')); [3:00 MIN] 
+
+---------------------------------------------------------
+     Life Cycle Method in React (NOW CODE KARYE GYE)
+
+• When Component is loaded
+• When Component is updated
+   with state and Props.
+• When Component is removed.
+• Interview Question.
+Q. JAISE HE HUM EK CYCEL KO REMOVE KARYE GYE TO YE CYCLE PHR SE START HOGA ya new cyclye chale ga ?
+ANS-NEW CYCLE START HOGA
+
+• Join on Insta @php.step.by.step
+
+   IN APP.JS 
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+import User from './User'
+import Members from './Members';
+function App() {
+  function getData()
+  {
+    alert("HELLO FROM APP ")
+  }
+  return(
+    <div className='App'>
+       <User data={getData} />
+       
+
+       
+    </div>
+  )
+}
+
+export default App;
+
+IN USER.JS
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function User(props){
+    return(
+        <div>
+      <h1>Life Cycle Method ! </h1>
+      <h2>Product</h2>
+      <button onClick={props.data}>Load Product</button>
+      <div style={{backgroundColor: "white" ,margin:30 ,}}>
+      <button onClick={props.data}>Update Product</button>
+      
+
+      </div>
+      <button onClick={props.data}>Remove Product</button>
+        </div>
+    )
+}
+
+export default User;
+
+OUTPUT 
+
+Life Cycle Method !
+Product
+Load Product
+Update Product
+Remove Product
+
+IN BUTTOM WITH WORK
+--------------------------------------------------------
+
+  Constructor Life Cycle Method [3:02 min]
+
+• What is constructor? ANS- jaise he class call hota hai waise he sath mai constructor v call ho jata hai.
+• Why this is important?
+• what we can do in this life cycle method?
+• Interview Question.JAISE HE HUM EK CYCEL KO REMOVE KARYE GYE TO YE CYCLE PHR SE START HOGA ya new cyclye chale ga ?
+
+• Join on Insta @php.step.by.step
+
+[IN APP.JS]
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+class app extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      data:"NIK"
+    }
+     }
+    render()
+    {
+      return(
+        <h1>hello world   {this.state.data }</h1>
+      )
+    }
+}
+
+export default app;
+OUTPUT= HELLO WORLD NIK
+
+
+
+
+---------------------------------------------------------
+#### 
+how to use STate for count (FOR SELF LEARN )
+
+in APP.JS 
+
+
+import logo from './logo.svg';
+import './App.css';
+import Nik from './components/nik';
+function App() {
+  return (
+    <div className="App" >
+      <Nik/>
+      <h1 >hello</h1>
+    </div>
+  );
+}
+
+export default App;
+
+
+[IN NIK.JSX ]
+
+
+ 
+ import { useState } from "react";
+ function Nik (){
+  const[state, setState]= useState(0)
+    const handlefn= ()=>{
+    //    alert("work")
+       setState(state+1)
+
+    }
+   return (
+    <div>
+
+        <button onClick={handlefn}>click</button>
+        <h1>count: {state}</h1>
+
+    </div>
+   ) 
+ }
+  export default Nik;
+
+
+------------------------------------------------------
+     Render, Life cycle method
+
+• Use of render Method. (render work ONLY in CLASS Component , function mai nhi work karta hai  )
+render mean exciuted kar use karna,
+rander kab kaam karye ga ?
+jab v koi state ya props update hoga to render method work karye ga. 
+• Make Class component.
+• Use state and props with render.
+• Interview Question.
+• Join on Insta @php.step.by.step
+
+###
+[in APP.JS]
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+import User from './User';      
+      function App() {
+        const [name,setName]=useState("anik")
+
+        const handlfn=()=>{
+          // alert("work")
+          setName("sidhu");
+        }
+        return(
+          <div style={{textAlign:'center'}}>
+               <h1>  Render Method In React</h1>
+               <User name={name} />
+
+                  <button onClick={handlfn}>UpDate Name</button>
+          </div>
+        )
+      }
+  
+
+
+export default App;
+
+###
+[IN USER,JS]
+
+import logo from './logo.svg';
+import './App.css';
+import React , {useState} from 'react';
+
+function User({name}){
+    return(
+        <div style={{textAlign:'center'}}>
+     <h1>{name}</h1>
+        </div>
+    )
+}
+
+export default User;
+
+         [OUTPUT]
+
+   Render Method In React
+     anik
+     UpDate Name
+
+---------------------------------------------------------
+            componentDidMount , [3:19 min]
+              Life cycle method
+• Use of componentDidMount Method.
+ans- api ka call karana
+• Make Class component.
+• No Effect of state and props.
+• Interview Question.
+• Join on Insta @php.step.by.step
+

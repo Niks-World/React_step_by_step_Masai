@@ -1,0 +1,149 @@
+Class 1
+what is React JS ?
+React is A javaScript LIbrary. (not a framewor )
+
+what is Library ?
+it is collection of pre-defined function or class or
+properties.
+
+what is Framework ?
+
+it is collection of Libraries set of rules 
+
+---------------------------------------------------------
+React is provide us----  Library--- set of pre-defined function(fn) and class
+
+Q1. what is the purpose of React ?
+It is used to create UI (User interface).
+
+Q2. UI
+HTML
+JS 
+THEY can alse make usre interface .
+
+Q3. why React to create UI ?
+
+React ---UI
+Q what HTML , JS , React provide
+
+HTML ---- UI ---- Pre-defined Element 
+
+JS----- UI -----PRE-defined fn using which can Create DOM Element ----- UI
+
+React --- UI --- Preidefined fns using which we can create React elements ----- UI
+---------------------------------------------------------
+How we create HTML element ?
+we use 
+<h2>/---</h2>
+<img/>
+<div>---</div>
+
+How to create DOM Element ?
+h2
+
+var h2Ref = docoment.createElement("h2")
+h2Ref.innerText = "Javascript Element"
+bodyRef.appendChild(h2Ref)       
+
+
+How to create React Element ?
+
+     h2
+React.createElement('tag name', {Attributes}, Children)
+
+var h2Ref= React.createElement('h2', null, "React Element")
+<h2>React Element </h2>
+
+// React DOM using
+var root = ReactDOM.create(docoment.getElementbyId('root'))
+
+root.render(h2Ref)
+
+ReactDOM is a Library which used to add React Element into the DOM.
+
+---------------------------------------------------------
+
+JSX =( JavaScript XML ) similar to HTML
+
+            //babel compiler
+JSX Element -------babel-----React Element ----- ReactDOM----- DOM --- UI
+
+with JSX create h2 tag
+
+const h2Ref = <h2> JSX Element </h2>
+
+const div = <div> 
+                 <h2> -----</h2>
+		  </div>
+
+--------------------------------------------------------
+Class 2
+
+we use this in codepen.io
+react  
+react - dom
+bable 
+
+react componet = sipmle JS which retun UI user interface
+
+
+react Component                 JS Function  
+
+Capital latter 		     Capital latter or lower case 
+ return --- UI			return- anything
+
+
+in react js there are 2 type of componet 
+
+(1) Functional componet -> we will use function more 
+
+(2) Class Componet   -> we will not use much class
+
+--------------------------------------------------------- how to create andd import file in app.js 
+
+crate file witth name of .js or jsx 
+and export default first than import in app.js 
+
+WE will use to create React in our system
+Toll --- CRA --- Create- React- App --- React Application
+
+need => Node.js => NPM
+ now erite the command in vs code tarminal 
+
+## (npx create-react-app demoapp) in demooapp you can give any name.
+
+# after creating => you can write camand in trml => npm start. its start live server localhost 3000
+
+# to stop any function = ctrl+c (it will stop the server) 
+
+* what is relationship with main and app 
+ans= parent --child relation
+        or sibling
+Relationship between componet 
+---------------------------------------------------------
+
+making a website  (rsf => shortcut of fn)
+# Profile componet making a file
+
+## Props (what is props?)
+Props are properties of Componet using which we can pass some input data to the React Component 
+ 
+{props.img}
+{props.name}
+   or
+function (name,img, gender ){}
+
+## key props allways need 
+
+today what we learn in 2nd class 
+Component
+Create React App
+Render List
+Re-usable Component
+props
+How to pass dynamic data to component
+Conditional Rendering
+Modules in CSS
+
+we get data in github repo kabir-sagii
+------------------------------------------------------
