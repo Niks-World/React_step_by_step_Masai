@@ -145,5 +145,5 @@ How to pass dynamic data to component
 Conditional Rendering
 Modules in CSS
 
-we get data in github repo kabir-sagii
+we get data in github repo kabir-sagii sir 
 ------------------------------------------------------
